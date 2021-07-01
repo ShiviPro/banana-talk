@@ -1,4 +1,5 @@
-const url = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json";
+// const url = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json";
+const url = "https://api.funtranslations.com/translate/minion.json";
 
 const translate = (event) => {
   let userInput = document.querySelector("#user-input").value;
