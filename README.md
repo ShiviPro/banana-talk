@@ -8,7 +8,7 @@ Speak as much minionese as you want, without your neighbouring minion judging yo
 
 **_Note_** - _Please feel free to download or clone this repo, in order to set up this project locally._
 
-# Local setup -
+# Local setup
 
 **Direct Download**
 
