@@ -57,7 +57,7 @@ body {
 
 .main-content__translated-output {
   max-width: 600px;
-  max-height: 200px;
+  height: 100px;
   border: 1px solid var(--black);
   overflow: scroll;
   padding: 10px;
