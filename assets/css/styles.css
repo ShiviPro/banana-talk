@@ -1,0 +1,94 @@
+/* Import Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&display=swap");
+:root {
+  --banana: #f2c94c;
+  --black: #2f3640;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  color: var(--black);
+  line-height: 1.5;
+  font-family: "Kalam", cursive;
+}
+
+.header {
+  background-color: var(--banana);
+}
+
+.header__h1 {
+  text-align: center;
+  margin-top: 0;
+  padding: 2vh;
+}
+
+.container-centered {
+  max-width: 600px;
+  margin: auto;
+}
+
+.main-content {
+  margin-top: 5vh;
+}
+
+.main-content__text-area {
+  width: 590px;
+  height: 200px;
+  border: 1px solid var(--black);
+  font-family: "Kalam", cursive;
+  font-size: 1.2rem;
+}
+
+.main-content__btn {
+  border: 0;
+  display: block;
+  background-color: var(--banana);
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  margin: 10px 0;
+  font-family: inherit;
+}
+
+.main-content__output-header {
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.main-content__translated-output {
+  max-width: 600px;
+  max-height: 200px;
+  border: 1px solid var(--black);
+  overflow: scroll;
+  padding: 10px;
+}
+
+.footer {
+  width: 100%;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  background-color: var(--banana);
+  text-align: center;
+}
+
+.footer__heading {
+  font-size: 1.4rem;
+  margin: 10px;
+}
+
+@media (max-width: 700px) {
+  .container-centered {
+    max-width: 90vw;
+    margin: auto;
+  }
+  .main-content__text-area {
+    max-width: 90vw;
+  }
+  .main-content__translated-output {
+    max-width: 87vw;
+  }
+  .main-content__btn {
+    margin: 10px auto;
+  }
+}
