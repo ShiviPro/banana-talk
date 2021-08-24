@@ -1,14 +1,33 @@
-// const url = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json";
 const url = "https://api.funtranslations.com/translate/minion.json";
 
+let loadingIconDiv = document.querySelector("#main-content__loading-icon");
+let output = document.querySelector("#output");
+
 const translate = (event) => {
-  let userInput = document.querySelector("#user-input").value;
+  output.innerText = "";
 
-  let output = document.querySelector("#output");
+  loadingIconDiv.innerHTML = `
+  <svg class="loading-icon">
+    <use xlink:href="#loading-icon" />
+  </svg>
+  `;
 
-  fetch(url + "?text=" + userInput)
-    .then((data) => data.json())
-    .then((json) => (output.innerText = json.contents.translated));
+  setTimeout(() => {
+    let userInput = document.querySelector("#user-input").value;
+    fetch(url + "?text=" + userInput)
+      .then((data) => data.json())
+      .then((json) => {
+        loadingIconDiv.innerHTML = `
+        <svg>
+          <use xlink:href="#minion-gets-an-idea" />
+        </svg>
+        `;
+        setTimeout(() => {
+          loadingIconDiv.innerHTML = ``;
+          output.innerText = json.contents.translated;
+        }, 800);
+      });
+  }, 500);
 };
 
 translateBtn = document.querySelector("#translate-btn");
