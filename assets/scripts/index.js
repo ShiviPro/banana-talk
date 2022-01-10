@@ -3,7 +3,7 @@ const url = "https://api.funtranslations.com/translate/minion.json";
 const loadingIconDiv = document.querySelector("#main-content__loading-icon");
 const output = document.querySelector("#output");
 
-const translate = (event) => {
+const translate = event => {
   output.innerText = "";
 
   loadingIconDiv.innerHTML = `
@@ -14,9 +14,9 @@ const translate = (event) => {
 
   setTimeout(() => {
     const userInput = document.querySelector("#user-input").value;
-    fetch(url + "?text=" + userInput)
-      .then((data) => data.json())
-      .then((json) => {
+    fetch(`${url}?text=${userInput}`)
+      .then(data => data.json())
+      .then(json => {
         loadingIconDiv.innerHTML = `
         <svg>
           <use xlink:href="#minion-gets-an-idea" />
