@@ -1,7 +1,7 @@
 const url = "https://api.funtranslations.com/translate/minion.json";
 
-let loadingIconDiv = document.querySelector("#main-content__loading-icon");
-let output = document.querySelector("#output");
+const loadingIconDiv = document.querySelector("#main-content__loading-icon");
+const output = document.querySelector("#output");
 
 const translate = (event) => {
   output.innerText = "";
@@ -13,7 +13,7 @@ const translate = (event) => {
   `;
 
   setTimeout(() => {
-    let userInput = document.querySelector("#user-input").value;
+    const userInput = document.querySelector("#user-input").value;
     fetch(url + "?text=" + userInput)
       .then((data) => data.json())
       .then((json) => {
